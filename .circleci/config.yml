@@ -139,7 +139,7 @@ workflows:
           container-image-name-updates: 'container=nginx,image-and-tag=${AWS_ECR_ACCOUNT_URL}/nginx:${CIRCLE_SHA1}'
   react-build-deplpy:
     jobs:
-      - build:
+      - build
       - deploy:
           requires:
             - build
